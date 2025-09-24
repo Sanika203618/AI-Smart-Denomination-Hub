@@ -1,0 +1,86 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0a0a0a, #1c1c1c);
+  color: #FFD700;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* Budget Container */
+.budget-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 40px;
+  background: #222;
+  border-radius: 20px;
+  border: 2px solid #FFD700;
+  box-shadow: 0 0 30px #FFD70088;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Section Titles */
+.budget-container h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+/* Input Forms */
+.goal-form, .expense-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Input fields */
+.goal-form input, .expense-form input, .expense-form select {
+  font-size: 1.3rem;
+  padding: 18px;
+  border-radius: 12px;
+  border: 2px solid #FFD700;
+  background: #111;
+  color: #FFD700;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #FFA500;
+}
+
+/* Buttons */
+.goal-form button, .expense-form button {
+  font-size: 1.4rem;
+  padding: 18px;
+  border-radius: 12px;
+  border: none;
+  background: #FFD700;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #FFA500;
+}
+
+/* Dashboard & Prediction Box */
+.dashboard, .prediction-box {
+  margin-top: 30px;
+  padding: 30px;
+  background: #111;
+  border-radius: 20px;
+  border: 2px solid #FFD700;
+  box-shadow: 0 0 25px #FFD70088;
+}
+
+/* Graph Canvas */
+canvas {
+  width: 100% !important;
+  height: 450px !important;
+  background: #111;
+  border-radius: 15px;
+  border: 2px solid #FFD700;
+}

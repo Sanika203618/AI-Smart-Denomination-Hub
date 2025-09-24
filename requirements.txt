@@ -1,0 +1,10 @@
+flask
+torch
+transformers
+sentence-transformers
+faiss-cpu
+scikit-learn
+pandas
+datasets
+tqdm
+python-dotenv

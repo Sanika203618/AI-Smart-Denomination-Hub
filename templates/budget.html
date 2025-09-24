@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Budgeting</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='budget.css') }}">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="hero">
+    <h1>💰 Smart Budgeting</h1>
+    <p>Enter your budget and expenses to visualize and optimize your spending.</p>
+  </div>
+
+  <div class="budget-container">
+    <!-- Budget Goal Input -->
+    <div class="goal-form">
+      <label for="budget_input">Enter Total Budget Amount</label>
+      <input type="number" id="budget_input" name="budget_input" placeholder="e.g. 50000" required>
+      <button onclick="setGoal()">Set Budget</button>
+    </div>
+
+    <!-- Expense Categories -->
+    <div class="expense-form">
+      <label>Enter Expense Categories and Amounts</label>
+      <input type="text" id="category1" placeholder="Category e.g. Food">
+      <input type="number" id="amount1" placeholder="Amount">
+      <input type="text" id="category2" placeholder="Category e.g. Bills">
+      <input type="number" id="amount2" placeholder="Amount">
+      <input type="text" id="category3" placeholder="Category e.g. Entertainment">
+      <input type="number" id="amount3" placeholder="Amount">
+      <button onclick="showBudgetGraph()">Calculate & Show Graph</button>
+    </div>
+
+    <!-- Graph -->
+    <div class="dashboard">
+      <canvas id="budgetChart"></canvas>
+    </div>
+  </div>
+
+  <script>
+    let budgetGoal = 0;
+    let expenses = {};
+
+    function setGoal() {
+      budgetGoal = parseFloat(document.getElementById("budget_input").value);
+      alert("Budget goal set to ₹" + budgetGoal);
+    }
+
+    function showBudgetGraph() {
+      expenses = {
+        [document.getElementById("category1").value]: parseFloat(document.getElementById("amount1").value),
+        [document.getElementById("category2").value]: parseFloat(document.getElementById("amount2").value),
+        [document.getElementById("category3").value]: parseFloat(document.getElementById("amount3").value),
+      };
+
+      const ctx = document.getElementById('budgetChart').getContext('2d');
+      new Chart(ctx, {
+        type: 'pie',
+        data: {
+          labels: Object.keys(expenses),
+          datasets: [{
+            label: 'Expenses',
+            data: Object.values(expenses),
+            backgroundColor: ['#FFD700','#FFA500','#FF4500','#00FFCC','#FF00FF'],
+          }]
+        }
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["Hi", "Hello", "Hey", "Good morning", "Good evening", "What's up"],
+      "responses": ["Hello!", "Hi there!", "Hey! How can I help you today?", "Hello! Ready to manage your budget?"]
+    },
+    {
+      "tag": "denomination_query",
+      "patterns": ["How can I split 500 in notes?", "Calculate denominations for 1000", "Give me 200 in smaller notes", "Break 2000 into denominations", "Show me denomination for 1500"],
+      "responses": ["Sure, I can calculate denominations for you.", "Let me help you with that calculation.", "I’ll split the amount into proper notes."]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Thanks", "Thank you", "Thanks a lot", "Much appreciated"],
+      "responses": ["You're welcome!", "No problem!", "Anytime!", "Happy to help!"]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", "See you", "Goodbye", "Quit", "Exit"],
+      "responses": ["Goodbye!", "See you later!", "Take care!", "Goodbye! Keep budgeting smartly!"]
+    },
+    {
+      "tag": "budgeting",
+      "patterns": [
+        "What is smart budgeting?",
+        "How does budgeting work?",
+        "Tell me about budget planning",
+        "Why should I use budgeting?",
+        "Can you explain smart budgeting?",
+        "How can I control my expenses?",
+        "What is expense tracking?",
+        "Give me tips for budgeting",
+        "Why is budgeting important?",
+        "How to save money with budgeting?"
+      ],
+      "responses": [
+        "Smart budgeting helps you plan expenses, track spending, and manage savings effectively.",
+        "Budgeting works by setting limits for categories like food, bills, savings, and others.",
+        "A budget is a roadmap for your money — it ensures you don’t overspend.",
+        "Using smart budgeting, you can achieve savings goals and avoid financial stress."
+      ]
+    },
+    {
+      "tag": "denominations",
+      "patterns": [
+        "What is denomination calculation?",
+        "How do you calculate denominations?",
+        "Explain denomination system",
+        "How to split money into notes?",
+        "What does denomination mean?",
+        "How to withdraw notes in different values?",
+        "Show me cash breakdown",
+        "Tell me about currency denominations",
+        "Explain virtual denomination tool",
+        "Why use denomination calculator?"
+      ],
+      "responses": [
+        "Denomination calculation breaks down an amount into available notes like 2000, 500, 200, 100, etc.",
+        "It helps in withdrawing or distributing cash efficiently.",
+        "Our AI Smart Denomination Hub can automatically split amounts into the best combination of notes.",
+        "This tool is useful for ATMs, donations, e-commerce, and budgeting."
+      ]
+    },
+    {
+      "tag": "libraries",
+      "patterns": [
+        "Which libraries did you use?",
+        "What Python libraries are used?",
+        "Tell me about the libraries in this project",
+        "Which AI tools are included?",
+        "What NLP libraries are used?",
+        "What libraries power the chatbot?",
+        "What did you use for training?",
+        "Which deep learning library is used?",
+        "How is NLTK used?",
+        "How does PyTorch help?"
+      ],
+      "responses": [
+        "This project uses Python libraries like PyTorch for AI models, NLTK for text preprocessing, and NumPy for arrays.",
+        "For chatbot training we used PyTorch, while NLTK handles tokenization and stemming.",
+        "We also used Matplotlib for visualizing budgets and SQL/JSON for storing data.",
+        "These libraries together make the AI Smart Denomination Hub powerful and flexible."
+      ]
+    }
+  ]
+}

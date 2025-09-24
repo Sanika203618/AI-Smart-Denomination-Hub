@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register - AI Smart Denomination Hub</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='auth.css') }}">
+</head>
+<body>
+  <div class="auth-container">
+    <h2>Register</h2>
+    <form method="POST">
+      <label>Username</label>
+      <input type="text" name="username" placeholder="Enter Username" required>
+      
+      <label>Email</label>
+      <input type="email" name="email" placeholder="Enter Email" required>
+      
+      <label>Password</label>
+      <input type="password" name="password" placeholder="Enter Password" required>
+      
+      <button type="submit">Register</button>
+    </form>
+    <p>Already have an account? <a href="{{ url_for('login') }}">Login here</a></p>
+  </div>
+</body>
+</html>

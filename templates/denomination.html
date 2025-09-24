@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Denomination Optimizer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='denomination.css') }}">
+</head>
+<body>
+    <div class="hero">
+        <h1>AI-Powered Denomination Optimization</h1>
+        <p>Enter an amount and choose a use case to get optimal note distribution.</p>
+    </div>
+
+    <div class="form-container">
+        <form method="POST" action="{{ url_for('denomination_page') }}">
+            <div class="input-group">
+                <div class="form-item">
+                    <label for="amount">Enter Amount</label>
+                    <input type="number" name="amount" id="amount" placeholder="Enter amount here" required>
+                </div>
+                
+                <div class="form-item">
+                    <label for="use_case">Select Use Case</label>
+                    <select name="use_case" id="use_case" required>
+                        <option value="ATM">ATM Withdrawal</option>
+                        <option value="E-Commerce">E-Commerce Payment</option>
+                        <option value="Donations">Donations</option>
+                        <option value="Daily Expense">Daily Expense</option>
+                    </select>
+                </div>
+
+                <div class="form-item">
+                    <label for="denominations">Enter Denominations (e.g., 500,200,100)</label>
+                    <input type="text" name="denominations" id="denominations" placeholder="e.g., 500,200,100">
+                </div>
+            </div>
+
+            <button type="submit">Calculate</button>
+        </form>
+    </div>
+
+    {% if result %}
+    <div class="result-container">
+        <h2>Result for {{ result.use_case }}</h2>
+        <p><b>Total:</b> ₹{{ result.total }}</p>
+        <ul>
+            {% for denom, count in result.distribution.items() %}
+                <li>₹{{ denom }} × {{ count }}</li>
+            {% endfor %}
+        </ul>
+        <a href="{{ url_for('denomination_page') }}">↩ Back</a>
+    </div>
+    {% endif %}
+</body>
+</html>

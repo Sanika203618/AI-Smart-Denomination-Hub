@@ -1,0 +1,5 @@
+venv/
+.env
+data/
+models/
+chatbot/flan_finetuned/

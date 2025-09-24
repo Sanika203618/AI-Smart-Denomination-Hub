@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Smart Denomination Hub</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <h1>Welcome to the AI Smart Denomination Hub</h1>
+    <p class="intro">
+      Transform the way you manage money.  
+      Our AI-powered hub helps you optimize denominations,  
+      plan smarter budgets, and simplify payments across  
+      ATM withdrawals, e-commerce, donations, and daily expenses.  
+      Every transaction becomes smarter, faster, and more efficient.
+    </p>
+  </div>
+
+  <!-- Features Section -->
+  <div class="features">
+    <div class="feature-list">
+
+      <!-- AI-Powered Denomination Optimization -->
+      <a href="{{ url_for('denomination_page') }}" class="feature">
+         AI-Powered Denomination Optimization
+      </a>
+
+      <!-- Smart Budgeting -->
+      <a href="{{ url_for('budget_page') }}" class="feature">
+        Smart Budgeting
+      </a>
+
+      <!-- AI Chatbot Assistance -->
+      <a href="{{ url_for('chatbot_page') }}" class="feature">
+         AI Chatbot Assistance
+      </a>
+       <div class="feature">
+          About
+      </div>
+
+
+    </div>
+  </div>
+
+  <!-- Anime.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

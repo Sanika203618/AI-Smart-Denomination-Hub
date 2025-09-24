@@ -1,0 +1,134 @@
+/* Body and General */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0a0a0a, #1c1c1c);
+    color: #FFD700;
+    margin: 0;
+    padding: 0;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background: #111;
+    border-bottom: 3px solid #FFD700;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px #ffcc00;
+}
+
+.hero p {
+    font-size: 1.4rem;
+    color: #f5d76e;
+}
+
+/* Form Container */
+.form-container {
+    max-width: 900px; /* Increased max-width to accommodate new box */
+    margin: 40px auto;
+    padding: 40px;
+    background: #222;
+    border-radius: 20px;
+    border: 2px solid #FFD700;
+    box-shadow: 0 0 25px #FFD70088;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center; /* Center the form elements */
+}
+
+/* Form Wrapper for proper alignment */
+.input-group {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    gap: 25px;
+    width: 100%; /* Take up full width of the container */
+}
+
+/* Form Item for Label and Input */
+.form-item {
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Allow items to grow and shrink */
+    min-width: 250px; /* Minimum width for each item */
+}
+
+/* Labels */
+label {
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+    color: #FFD700;
+    font-weight: bold;
+}
+
+/* Input and Select */
+input, select {
+    font-size: 1.3rem;
+    padding: 18px;
+    border-radius: 12px;
+    border: 2px solid #FFD700;
+    background: #111;
+    color: #FFD700;
+    width: 100%; /* Make inputs fill their container */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #FFA500;
+}
+
+/* Calculate Button */
+button {
+    font-size: 1.4rem;
+    padding: 18px 40px; /* Added horizontal padding */
+    border-radius: 12px;
+    border: none;
+    background: #FFD700;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    width: fit-content; /* Make button's width fit its content */
+}
+
+button:hover {
+    background: #FFA500;
+}
+
+/* Result Container */
+.result-container {
+    max-width: 750px;
+    margin: 40px auto;
+    padding: 40px;
+    background: #111;
+    border-radius: 20px;
+    border: 2px solid #FFD700;
+    box-shadow: 0 0 25px #FFD70088;
+    text-align: center;
+}
+
+.result-container h2 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.result-container p {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+
+.result-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.result-container li {
+    font-size: 1.3rem;
+    margin: 8px 0;
+}
